@@ -13,6 +13,8 @@ namespace Xiao_Hour_ePOS
 {
     public partial class frmLogin : MaterialForm
     {
+         
+
         public frmLogin()
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace Xiao_Hour_ePOS
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+           
 
         }
 
@@ -27,6 +30,8 @@ namespace Xiao_Hour_ePOS
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            
+
             MaterialDialog materialDialog = new MaterialDialog(this, "Bye bye!", "Are you sure you want to exit me?", "Exit Me", true, "Stay with Me");
             DialogResult result = materialDialog.ShowDialog(this);
 
@@ -35,12 +40,15 @@ namespace Xiao_Hour_ePOS
                 Application.Exit();
             }
 
+
+      
          
             
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
             frmHome frm = new frmHome();
 
             frm.Show();
@@ -50,6 +58,8 @@ namespace Xiao_Hour_ePOS
             Program.loginForm.Hide();
             MaterialSnackBar SnackBarMessage = new MaterialSnackBar("Login successfully", "OK", true);
             SnackBarMessage.Show(this);
+
+            
         }
     }
 }
