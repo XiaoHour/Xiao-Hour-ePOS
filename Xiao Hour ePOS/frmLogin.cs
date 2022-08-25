@@ -54,6 +54,7 @@ namespace Xiao_Hour_ePOS
                 SnackBarMessage.Show(this);
 
                 Program.currentLoginUsername = txtUsername.Text;
+
                 //open form home
                 frmHome frm_home = new frmHome();
                 frm_home.Show();
@@ -77,6 +78,17 @@ namespace Xiao_Hour_ePOS
             }
 
             db.Dispose();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            MyDBContext db = new MyDBContext();
+
+            List<UserModel> users = new List<UserModel>();
+            users = db.Users.Where(r => r.username == txtUsername.Text && r.password == txtPassword.Text).ToList();
+
+            db.Dispose();
+
         }
     }
 }

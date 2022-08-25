@@ -28,7 +28,17 @@ namespace Xiao_Hour_ePOS
 
         private void frmHome_Load(object sender, EventArgs e)
         {
-            lblUsername.Text = Program.currentLoginUsername;
+            lblUsername.Text = String.Format(lblUsername.Text, Program.currentLoginUsername);
+        }
+
+        private void tbsale_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Text = materialTabControl1.SelectedTab.Text;
         }
     }
 }

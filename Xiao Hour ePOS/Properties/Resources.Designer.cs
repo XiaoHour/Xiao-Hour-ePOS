@@ -73,6 +73,16 @@ namespace Xiao_Hour_ePOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_profiles_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-profiles-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Interior_Restaurant___Veerle_s_Blog_4_0 {
             get {
                 object obj = ResourceManager.GetObject("Interior Restaurant _ Veerle\'s Blog 4_0", resourceCulture);

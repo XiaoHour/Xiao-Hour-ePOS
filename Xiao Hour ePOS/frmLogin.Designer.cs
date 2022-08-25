@@ -96,10 +96,10 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel2.HighEmphasis = true;
-            this.materialLabel2.Location = new System.Drawing.Point(84, 747);
+            this.materialLabel2.Location = new System.Drawing.Point(117, 761);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(245, 57);
+            this.materialLabel2.Size = new System.Drawing.Size(245, 49);
             this.materialLabel2.TabIndex = 6;
             this.materialLabel2.Text = "Thank you for your support...!\r\nPower by : ..............!\r\n";
             this.materialLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -109,9 +109,9 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(84, 57);
+            this.pictureBox2.Location = new System.Drawing.Point(85, 52);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(266, 213);
+            this.pictureBox2.Size = new System.Drawing.Size(276, 236);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
@@ -125,7 +125,7 @@
             this.btnExit.Depth = 0;
             this.btnExit.HighEmphasis = true;
             this.btnExit.Icon = null;
-            this.btnExit.Location = new System.Drawing.Point(348, 747);
+            this.btnExit.Location = new System.Drawing.Point(369, 761);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnExit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnExit.Name = "btnExit";
@@ -147,7 +147,7 @@
             this.btnlogin.Depth = 0;
             this.btnlogin.HighEmphasis = true;
             this.btnlogin.Icon = null;
-            this.btnlogin.Location = new System.Drawing.Point(148, 600);
+            this.btnlogin.Location = new System.Drawing.Point(170, 584);
             this.btnlogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnlogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnlogin.Name = "btnlogin";
@@ -176,7 +176,7 @@
             this.txtUsername.Hint = "Username";
             this.txtUsername.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtUsername.LeadingIcon = global::Xiao_Hour_ePOS.Properties.Resources.username;
-            this.txtUsername.Location = new System.Drawing.Point(68, 460);
+            this.txtUsername.Location = new System.Drawing.Point(68, 451);
             this.txtUsername.Mask = "";
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.MouseState = MaterialSkin.MouseState.OUT;
@@ -219,7 +219,7 @@
             this.txtPassword.Hint = "Password";
             this.txtPassword.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtPassword.LeadingIcon = global::Xiao_Hour_ePOS.Properties.Resources.key_star;
-            this.txtPassword.Location = new System.Drawing.Point(68, 533);
+            this.txtPassword.Location = new System.Drawing.Point(68, 517);
             this.txtPassword.Mask = "";
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
@@ -254,7 +254,7 @@
             this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.materialLabel1.HighEmphasis = true;
             this.materialLabel1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.materialLabel1.Location = new System.Drawing.Point(19, 333);
+            this.materialLabel1.Location = new System.Drawing.Point(43, 333);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(399, 75);
@@ -266,6 +266,7 @@
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnlogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1113, 819);
@@ -275,6 +276,7 @@
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
