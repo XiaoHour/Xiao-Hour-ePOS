@@ -53,6 +53,7 @@ namespace Xiao_Hour_ePOS
                 MaterialSnackBar SnackBarMessage = new MaterialSnackBar("Login successfully", "OK", true);
                 SnackBarMessage.Show(this);
 
+                Program.currentLoginUsername = txtUsername.Text;
                 //open form home
                 frmHome frm_home = new frmHome();
                 frm_home.Show();
@@ -60,6 +61,9 @@ namespace Xiao_Hour_ePOS
                 //hide login form
                 this.Hide();
                 Program.loginForm = this;
+
+
+            
 
                 //clear login form
                 txtUsername.Text = "";

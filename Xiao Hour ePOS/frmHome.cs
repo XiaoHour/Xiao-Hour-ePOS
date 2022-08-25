@@ -15,6 +15,7 @@ namespace Xiao_Hour_ePOS
     {
         public frmHome()
         {
+
             InitializeComponent();
         }
 
@@ -23,6 +24,11 @@ namespace Xiao_Hour_ePOS
             this.Close();
             Program.loginForm.Show();
 
+        }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+            lblUsername.Text = Program.currentLoginUsername;
         }
     }
 }
