@@ -12,8 +12,9 @@ namespace Xiao_Hour_ePOS
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string path = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
-            optionsBuilder.UseSqlite($"Data Source={path}\\XiaoHourEPOS.db;");
+            string startupPath = System.IO.Directory.GetCurrentDirectory().Replace("bin", ",").Split(',')[0];
+
+            optionsBuilder.UseSqlite($"Data Source={startupPath}XiaoHourEPOS.db;");
         }
 
      

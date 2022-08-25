@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="bin\Debug\net6.0-windows\" />
     <Folder Include="Customers\" />
     <Folder Include="Reports\" />
     <Folder Include="Sales\" />
