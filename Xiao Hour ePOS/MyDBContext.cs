@@ -14,9 +14,6 @@ namespace Xiao_Hour_ePOS
         {
             string path = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
             optionsBuilder.UseSqlite($"Data Source={path}\\XiaoHourEPOS.db;");
-
-
-
         }
 
      
