@@ -18,6 +18,7 @@ namespace Xiao_Hour_ePOS
         public frmLogin()
         {
             InitializeComponent();
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -88,7 +89,7 @@ namespace Xiao_Hour_ePOS
             users = db.Users.Where(r => r.username == txtUsername.Text && r.password == txtPassword.Text).ToList();
 
             db.Dispose();
-
+            
         }
     }
 }

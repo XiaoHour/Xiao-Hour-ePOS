@@ -34,6 +34,7 @@
             this.tbdashboard = new System.Windows.Forms.TabPage();
             this.lblUsername = new MaterialSkin.Controls.MaterialLabel();
             this.tbsale = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tbproduct = new System.Windows.Forms.TabPage();
             this.tbcustomer = new System.Windows.Forms.TabPage();
             this.tbreport = new System.Windows.Forms.TabPage();
@@ -42,6 +43,7 @@
             this.txtsearch = new MaterialSkin.Controls.MaterialTextBox();
             this.materialTabControl1.SuspendLayout();
             this.tbdashboard.SuspendLayout();
+            this.tbsale.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -61,7 +63,7 @@
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
             this.materialTabControl1.Size = new System.Drawing.Size(986, 586);
-            this.materialTabControl1.TabIndex = 0;
+            this.materialTabControl1.TabIndex = 2;
             this.materialTabControl1.SelectedIndexChanged += new System.EventHandler(this.materialTabControl1_SelectedIndexChanged);
             // 
             // tbdashboard
@@ -83,7 +85,7 @@
             this.lblUsername.Depth = 0;
             this.lblUsername.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblUsername.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.lblUsername.Location = new System.Drawing.Point(24, 18);
+            this.lblUsername.Location = new System.Drawing.Point(3, 4);
             this.lblUsername.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(283, 41);
@@ -92,6 +94,7 @@
             // 
             // tbsale
             // 
+            this.tbsale.Controls.Add(this.tableLayoutPanel1);
             this.tbsale.ImageKey = "icons8-land-sales-24.png";
             this.tbsale.Location = new System.Drawing.Point(4, 24);
             this.tbsale.Name = "tbsale";
@@ -100,6 +103,20 @@
             this.tbsale.TabIndex = 1;
             this.tbsale.Text = "SALE";
             this.tbsale.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(972, 552);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tbproduct
             // 
@@ -182,7 +199,7 @@
             this.txtsearch.Multiline = false;
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(259, 36);
-            this.txtsearch.TabIndex = 3;
+            this.txtsearch.TabIndex = 1;
             this.txtsearch.Text = "";
             this.txtsearch.TrailingIcon = null;
             this.txtsearch.UseTallSize = false;
@@ -205,6 +222,7 @@
             this.materialTabControl1.ResumeLayout(false);
             this.tbdashboard.ResumeLayout(false);
             this.tbdashboard.PerformLayout();
+            this.tbsale.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -227,5 +245,6 @@
         private TabPage tblogout;
         private MaterialSkin.Controls.MaterialTextBox txtsearch;
         private MaterialSkin.Controls.MaterialLabel lblUsername;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }

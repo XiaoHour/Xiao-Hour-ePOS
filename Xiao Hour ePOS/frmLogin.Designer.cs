@@ -195,7 +195,7 @@
             this.txtUsername.ShortcutsEnabled = true;
             this.txtUsername.Size = new System.Drawing.Size(306, 48);
             this.txtUsername.SkipLiterals = true;
-            this.txtUsername.TabIndex = 2;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.TabStop = false;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsername.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
@@ -238,7 +238,7 @@
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(306, 48);
             this.txtPassword.SkipLiterals = true;
-            this.txtPassword.TabIndex = 1;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.TabStop = false;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
