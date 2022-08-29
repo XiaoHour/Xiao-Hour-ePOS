@@ -31,24 +31,27 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
-            this.tbdashboard = new System.Windows.Forms.TabPage();
-            this.lblUsername = new MaterialSkin.Controls.MaterialLabel();
             this.tbsale = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tbproduct = new System.Windows.Forms.TabPage();
             this.tbcustomer = new System.Windows.Forms.TabPage();
+            this.ucUserList1 = new Xiao_Hour_ePOS.Users.ucUserList();
             this.tbreport = new System.Windows.Forms.TabPage();
             this.tblogout = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.txtsearch = new MaterialSkin.Controls.MaterialTextBox();
+            this.lblUsername = new MaterialSkin.Controls.MaterialLabel();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.tbDashboard = new System.Windows.Forms.TabPage();
             this.materialTabControl1.SuspendLayout();
-            this.tbdashboard.SuspendLayout();
             this.tbsale.SuspendLayout();
+            this.tbcustomer.SuspendLayout();
+            this.tbDashboard.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabControl1
             // 
-            this.materialTabControl1.Controls.Add(this.tbdashboard);
+            this.materialTabControl1.Controls.Add(this.tbDashboard);
             this.materialTabControl1.Controls.Add(this.tbsale);
             this.materialTabControl1.Controls.Add(this.tbproduct);
             this.materialTabControl1.Controls.Add(this.tbcustomer);
@@ -65,32 +68,6 @@
             this.materialTabControl1.Size = new System.Drawing.Size(986, 586);
             this.materialTabControl1.TabIndex = 2;
             this.materialTabControl1.SelectedIndexChanged += new System.EventHandler(this.materialTabControl1_SelectedIndexChanged);
-            // 
-            // tbdashboard
-            // 
-            this.tbdashboard.BackColor = System.Drawing.Color.White;
-            this.tbdashboard.Controls.Add(this.lblUsername);
-            this.tbdashboard.ImageKey = "icons8-dashboard-layout-24.png";
-            this.tbdashboard.Location = new System.Drawing.Point(4, 24);
-            this.tbdashboard.Name = "tbdashboard";
-            this.tbdashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.tbdashboard.Size = new System.Drawing.Size(978, 558);
-            this.tbdashboard.TabIndex = 0;
-            this.tbdashboard.Text = "DASHBOARD";
-            this.tbdashboard.Click += new System.EventHandler(this.tbsale_Click);
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Depth = 0;
-            this.lblUsername.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lblUsername.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.lblUsername.Location = new System.Drawing.Point(3, 4);
-            this.lblUsername.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(283, 41);
-            this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "Welcome back {0}!";
             // 
             // tbsale
             // 
@@ -131,6 +108,7 @@
             // 
             // tbcustomer
             // 
+            this.tbcustomer.Controls.Add(this.ucUserList1);
             this.tbcustomer.ImageKey = "icons8-customer-24.png";
             this.tbcustomer.Location = new System.Drawing.Point(4, 24);
             this.tbcustomer.Name = "tbcustomer";
@@ -139,6 +117,14 @@
             this.tbcustomer.TabIndex = 3;
             this.tbcustomer.Text = "CUSTOMER";
             this.tbcustomer.UseVisualStyleBackColor = true;
+            // 
+            // ucUserList1
+            // 
+            this.ucUserList1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucUserList1.Location = new System.Drawing.Point(3, 3);
+            this.ucUserList1.Name = "ucUserList1";
+            this.ucUserList1.Size = new System.Drawing.Size(972, 552);
+            this.ucUserList1.TabIndex = 0;
             // 
             // tbreport
             // 
@@ -204,6 +190,53 @@
             this.txtsearch.TrailingIcon = null;
             this.txtsearch.UseTallSize = false;
             // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Depth = 0;
+            this.lblUsername.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblUsername.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
+            this.lblUsername.Location = new System.Drawing.Point(3, 4);
+            this.lblUsername.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(283, 41);
+            this.lblUsername.TabIndex = 0;
+            this.lblUsername.Text = "Welcome back {0}!";
+            // 
+            // materialButton1
+            // 
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(70, 104);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton1.Size = new System.Drawing.Size(158, 36);
+            this.materialButton1.TabIndex = 1;
+            this.materialButton1.Text = "materialButton1";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            // 
+            // tbDashboard
+            // 
+            this.tbDashboard.BackColor = System.Drawing.Color.White;
+            this.tbDashboard.Controls.Add(this.materialButton1);
+            this.tbDashboard.Controls.Add(this.lblUsername);
+            this.tbDashboard.ImageKey = "icons8-dashboard-layout-24.png";
+            this.tbDashboard.Location = new System.Drawing.Point(4, 24);
+            this.tbDashboard.Name = "tbDashboard";
+            this.tbDashboard.Padding = new System.Windows.Forms.Padding(3);
+            this.tbDashboard.Size = new System.Drawing.Size(978, 558);
+            this.tbDashboard.TabIndex = 0;
+            this.tbDashboard.Text = "DASHBOARD";
+            this.tbDashboard.Click += new System.EventHandler(this.tbsale_Click);
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -211,18 +244,24 @@
             this.ClientSize = new System.Drawing.Size(989, 677);
             this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.materialTabControl1);
+            this.DrawerAutoShow = true;
+            this.DrawerBackgroundWithAccent = true;
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.materialTabControl1;
+            this.DrawerWidth = 250;
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_64;
             this.Name = "frmHome";
             this.Padding = new System.Windows.Forms.Padding(0, 88, 3, 3);
             this.Text = "Xiao Hour ePOS 2022";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.frmHome_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHome_FormClosing);
             this.Load += new System.EventHandler(this.frmHome_Load);
             this.materialTabControl1.ResumeLayout(false);
-            this.tbdashboard.ResumeLayout(false);
-            this.tbdashboard.PerformLayout();
             this.tbsale.ResumeLayout(false);
+            this.tbcustomer.ResumeLayout(false);
+            this.tbDashboard.ResumeLayout(false);
+            this.tbDashboard.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -236,7 +275,6 @@
         private TabPage tabreport;
         private Panel panel1;
         private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
-        private TabPage tbdashboard;
         private TabPage tbsale;
         private TabPage tbproduct;
         private TabPage tbcustomer;
@@ -244,7 +282,10 @@
         private TabPage tbreport;
         private TabPage tblogout;
         private MaterialSkin.Controls.MaterialTextBox txtsearch;
-        private MaterialSkin.Controls.MaterialLabel lblUsername;
         private TableLayoutPanel tableLayoutPanel1;
+        private Users.ucUserList ucUserList1;
+        private TabPage tbDashboard;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialLabel lblUsername;
     }
 }

@@ -23,6 +23,7 @@ namespace Xiao_Hour_ePOS
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            Program.is_exit = true;
             Application.Exit();
         }
 
@@ -56,16 +57,22 @@ namespace Xiao_Hour_ePOS
 
                 Program.currentLoginUsername = txtUsername.Text;
 
-                //open form home
-                frmHome frm_home = new frmHome();
-                frm_home.Show();
-
+               
                 //hide login form
-                this.Hide();
                 Program.loginForm = this;
+                Program.loginForm.Hide();
+
+                //open form home
+                if (Program.homeForm == null)
+                {
+                    frmHome frmHome = new frmHome();
+                    Program.homeForm = frmHome;
+
+                }
+                Program.homeForm.Show();
 
 
-            
+
 
                 //clear login form
                 txtUsername.Text = "";

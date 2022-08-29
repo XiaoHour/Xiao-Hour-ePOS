@@ -21,14 +21,15 @@ namespace Xiao_Hour_ePOS
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Program.loginForm.Show();
+
+             
 
         }
 
         private void frmHome_Load(object sender, EventArgs e)
         {
             lblUsername.Text = String.Format(lblUsername.Text, Program.currentLoginUsername);
+      
         }
 
         private void tbsale_Click(object sender, EventArgs e)
@@ -38,7 +39,36 @@ namespace Xiao_Hour_ePOS
 
         private void materialTabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Text = materialTabControl1.SelectedTab.Text;
+            if (materialTabControl1.SelectedTab.Text.ToLower() == "logout")
+            {
+             
+                this.Close();
+            }
+            else
+            {
+                this.Text = materialTabControl1.SelectedTab.Text;
+            }
+        }
+
+        private void frmHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            if (!Program.is_exit)
+            {
+                e.Cancel = true;
+                Program.homeForm = this;
+                Program.homeForm.Hide();
+                Program.loginForm.Show();
+            }
+            
+        }
+
+        private void frmHome_Activated(object sender, EventArgs e)
+        {
+            if (materialTabControl1.SelectedTab.Text.ToLower() == "logout")
+            {
+                materialTabControl1.SelectedTab = tbDashboard;
+            }
         }
     }
 }

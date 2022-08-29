@@ -18,6 +18,8 @@ namespace Xiao_Hour_ePOS
 
 
         public static frmLogin loginForm { get; set; }
+        public static frmHome homeForm { get; set; }
+        public static bool is_exit { get; set; }
         public static string currentLoginUsername { get; set; } = "";
 
 
