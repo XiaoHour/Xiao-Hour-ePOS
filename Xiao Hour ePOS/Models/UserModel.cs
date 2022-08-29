@@ -19,5 +19,7 @@ namespace Xiao_Hour_ePOS.Models
         public string password { get; set; } = "";
         public string gender{ get; set; } = "Male";
         public string fullname{ get; set; } = "";
+ 
+ 
     }
 }
